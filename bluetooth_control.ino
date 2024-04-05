@@ -16,41 +16,43 @@ Serial.begin(9600); //Set the baud rate to your Bluetooth module.
 void loop(){
 if(Serial.available() > 0){
 val = Serial.read();
+Serial.print("Key pressed: ");
+Serial.println((char)val);
 
 Stop(); //initialize with motors stoped
 
-if (val == 'F'){
+if (val == 'R'){
 forward();
 
 }
 
-if (val == 'B'){
+if (val == 'L'){
 back();
 }
 
-if (val == 'L'){
+if (val == 'D'){
 left();
 }
 
-if (val == 'R'){
+if (val == 'U'){
 right();
 }
-if (val == 'I'){
+if (val == 'T'){
 topright();
 }
 
-if (val == 'J'){
+if (val == 'F'){
 topleft();
 }
 
-if (val == 'K'){
+if (val == 'H'){
 bottomright();
 }
 
-if (val == 'M'){
+if (val == 'G'){
 bottomleft();
 }
-if (val == 'T'){
+if (val == 'S'){
 Stop();
 }
 }
